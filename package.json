@@ -1,0 +1,17 @@
+{
+  "name": "clean-tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "Matheus R. Brunelli",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.14.6",
+    "typescript": "^4.9.5",
+    "vitest": "^0.29.2"
+  }
+}
