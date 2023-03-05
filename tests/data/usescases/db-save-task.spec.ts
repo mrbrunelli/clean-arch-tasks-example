@@ -15,11 +15,11 @@ describe("DbAddTask", () => {
     sut = new DbSaveTask(saveTaskRepository, idGenerator);
   });
 
-  test("should save new task", () => {
+  test("should save new task", async () => {
     const task = {
       text: "wash the car",
     } as Task;
-    const result = sut.save(task);
+    const result = await sut.save(task);
     expect(result).toEqual({
       id: "new-id",
       isDone: false,
@@ -27,13 +27,13 @@ describe("DbAddTask", () => {
     });
   });
 
-  test("should complete a task", () => {
+  test("should complete a task", async () => {
     const task = {
       id: "id",
       text: "wash the car",
       isDone: true,
     } as Task;
-    const result = sut.save(task);
+    const result = await sut.save(task);
     expect(result).toEqual({
       id: "id",
       isDone: true,
@@ -41,13 +41,13 @@ describe("DbAddTask", () => {
     });
   });
 
-  test("should undo a complete task", () => {
+  test("should undo a complete task", async () => {
     const task = {
       id: "id",
       text: "wash the car",
       isDone: false,
     } as Task;
-    const result = sut.save(task);
+    const result = await sut.save(task);
     expect(result).toEqual({
       id: "id",
       isDone: false,

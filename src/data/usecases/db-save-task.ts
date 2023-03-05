@@ -9,11 +9,16 @@ export class DbSaveTask implements SaveTask {
     private readonly idGenerator: IdGenerator
   ) {}
 
-  save(task: Task): Task {
-    if (!task.id) {
-      task.id = this.idGenerator.gen();
-      task.isDone = false;
+  async save(taskData: SaveTask.Params): Promise<SaveTask.Result> {
+    if (!taskData.id) {
+      taskData.id = this.idGenerator.gen();
+      taskData.isDone = false;
     }
+    const task = {
+      id: taskData.id,
+      isDone: taskData.isDone,
+      text: taskData.text,
+    } satisfies Task;
     return this.saveTaskRepository.save(task);
   }
 }
