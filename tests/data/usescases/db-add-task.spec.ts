@@ -17,23 +17,41 @@ describe("DbAddTask", () => {
 
   test("should add new task", () => {
     const task = {
-      text: "wath the car",
+      text: "wash the car",
     } as Task;
     const result = sut.add(task);
     expect(result).toEqual({
       id: "new-id",
       isDone: false,
-      text: "wath the car",
+      text: "wash the car",
     });
   });
 
   test("should complete a task", () => {
     const task = {
       id: "id",
-      text: "wath the car",
+      text: "wash the car",
       isDone: true,
     } as Task;
     const result = sut.add(task);
-    expect(result).to;
+    expect(result).toEqual({
+      id: "id",
+      isDone: true,
+      text: "wash the car",
+    });
+  });
+
+  test("should undo a complete task", () => {
+    const task = {
+      id: "id",
+      text: "wash the car",
+      isDone: false,
+    } as Task;
+    const result = sut.add(task);
+    expect(result).toEqual({
+      id: "id",
+      isDone: false,
+      text: "wash the car",
+    });
   });
 });
