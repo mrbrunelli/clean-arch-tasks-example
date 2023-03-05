@@ -20,6 +20,7 @@
     "vitest-mongodb": "^0.0.4"
   },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "fastify": "^4.14.0",
     "mongodb": "^5.1.0",
     "mongoose": "^7.0.0"
