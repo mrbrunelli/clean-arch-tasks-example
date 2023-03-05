@@ -13,7 +13,10 @@
                 <mxCell id="4" value="Task" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" parent="1" vertex="1">
                     <mxGeometry x="710" y="260" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="5" value="AddTask" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" parent="1" vertex="1">
+                <mxCell id="28" style="edgeStyle=none;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="5" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="SaveTask" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" parent="1" vertex="1">
                     <mxGeometry x="710" y="360" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -35,14 +38,40 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="11" value="DbAddTask" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="11" value="DbSaveTask" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="300" y="360" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="12" value="AddTaskRepo" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" parent="1" vertex="1">
+                <mxCell id="12" value="SaveTaskRepository" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" parent="1" vertex="1">
                     <mxGeometry x="430" y="250" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="13" value="IdGenerator" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" parent="1" vertex="1">
                     <mxGeometry x="170" y="250" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="550" width="440" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Presentation" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="490" y="515" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="WebController" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="570" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="17" target="5">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="770" y="700"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=none;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="17" target="16">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="330" y="600"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="SaveTaskController" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="300" y="670" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
