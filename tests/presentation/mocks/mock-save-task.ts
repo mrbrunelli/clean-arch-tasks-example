@@ -1,8 +1,7 @@
-import { Task } from "../../../src/domain/models/task";
 import { SaveTask } from "../../../src/domain/usecases/save-task";
 
 export class MockSaveTask implements SaveTask {
-  async save(task: SaveTask.Params): Promise<Task> {
+  async save(task: SaveTask.Params): Promise<SaveTask.Result> {
     return {
       id: task.id || "new-id",
       isDone: task.isDone,
